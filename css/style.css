@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin: 0o;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -13,22 +13,16 @@ body {
   line-height: 1;
   font-weight: 400;
   background-color: #333;
-  /* background-image: url ("images/hero-img.png"); */
 }
 
-.header {
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: #333; */
+  flex-direction: column;
   text-decoration: none;
-  background-image: url ("images/hero-img.png");
-
-  /* height: 9.6rem;
-  padding: 0 4.8rem;
-  position: relative; */
-
-  height: 4.8rem;
+  background-image: url("../images/hero-img.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .name {
