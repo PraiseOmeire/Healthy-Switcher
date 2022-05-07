@@ -1,0 +1,28 @@
+/* 2480PX (LARGE DESKTOP */
+@media (max-width: 100em) {
+  .hero {
+    max-width: 130rem;
+  }
+  .heading-primary {
+    font-size: 7.2rem;
+  }
+}
+
+/* BELOW 1700PX (SMALLER DESKTOP */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 5.5rem;
+  }
+  .description {
+    margin: 0 30rem;
+  }
+
+  .feature {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media;
