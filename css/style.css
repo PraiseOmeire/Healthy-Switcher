@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
   padding: 0;
   margin: 0;
@@ -156,6 +158,19 @@ nav {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.chef-heading,
+.dish-heading,
+.how-heading {
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+/* SECTION FEATURE */
 .feature {
   /* max-width: 59.5rem; */
   /* height : 3rem;
@@ -205,6 +220,7 @@ nav {
   color: #fff;
 }
 
+/* SECTION ABOUT */
 .section-about {
   background-color: #3a3a3a;
   display: grid;
@@ -238,13 +254,10 @@ nav {
   /* grid-template-columns: repeat(3, 1fr); */
   gap: 1.6rem;
   padding: 1.6rem;
-  /* height: 3.2rem; */
   height: 20rem;
   width: 35rem;
   margin-top: 5rem;
-  /* border-radius: 50%; */
   overflow: hidden;
-  /* display: block; */
   width: 100%;
   transition: all 0.4s;
 }
@@ -260,14 +273,6 @@ nav {
   margin: -7rem 7.5rem;
 }
 
-.how-heading {
-  text-align: center;
-  color: #d9d9d9;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  font-weight: 300;
-  /* margin: 4.8rem 0; */
-}
 /* 
 .work {
   -template-columns: repeat(4, 1fr);
@@ -277,6 +282,7 @@ nav {
   background-color: #4a4a4a;
 } */
 
+/* SECTION HOW IT WORKS */
 .work {
   box-shadow: 0 2.4rem 4.8rem rgba(124, 71, 71, 0.247);
   border-radius: 11px;
@@ -333,18 +339,13 @@ nav {
   color: #fff;
 }
 
-.dish-heading {
-  text-align: center;
-  color: #d9d9d9;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  font-weight: 300;
-}
+/* SECTION DISH OF THE DAY */
 
 .dish-outline {
   /* margin: 0 5rem; */
   gap: 1.6rem;
   padding: 1.6rem 1.6rem;
+  padding-bottom: 3rem;
 
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
   border-radius: 11px;
@@ -392,15 +393,54 @@ nav {
   padding-bottom: 2rem;
 }
 
-.star-img {
-  transform: scale(0.3);
-  fill: rgba(124, 71, 71, 0.247);
+.icons {
+  display: flex;
 }
 
-.star-img {
-  fill: #32a54f;
+.star-icon {
+  font-size: 2rem;
+  color: #555;
+}
+
+.star-icon-1 {
+  color: yellow;
+  font-size: 2rem;
 }
 
 .number {
-  display: grid;
+  margin: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.order {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: -0.5rem 1rem;
+  margin-left: 4rem;
+  border: solid 0.1px #fff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 43px;
+}
+
+.order:hover,
+.order:active {
+  background-color: #0ebe0e;
+}
+
+/* SECTION THIS MONTHS CHEF */
+.chef-img {
+  grid-template-columns: repeat(3fr 1fr);
+  gap: 7.6rem;
+  height: 6.8rem;
+  width: 6.8rem;
+  border-radius: 50%;
+  margin-right: 10.6rem;
+  margin-left: 5rem;
+  display: flex;
+  align-self: center;
+}
+.section-chef {
+  align-items: center;
 }
