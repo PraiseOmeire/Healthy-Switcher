@@ -1,6 +1,8 @@
+/* GENERAL */
+
 * {
   padding: 0;
-  margin: 0o;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -12,23 +14,21 @@ body {
   font-family: Helvetica Neue;
   line-height: 1;
   font-weight: 400;
-  background-color: #333;
-  /* background-image: url ("images/hero-img.png"); */
+  background-color: #2a2a2a;
 }
 
-.header {
+main {
+  padding: 0 100px;
+}
+
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: #333; */
+  flex-direction: column;
   text-decoration: none;
-  background-image: url ("images/hero-img.png");
-
-  /* height: 9.6rem;
-  padding: 0 4.8rem;
-  position: relative; */
-
-  height: 4.8rem;
+  background-image: url("../images/hero-img.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .name {
@@ -38,6 +38,12 @@ body {
   color: #0ebe0e;
   margin: 2.4rem;
   margin-left: 12rem;
+}
+
+nav {
+  display: flex;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
 }
 
 .main-nav-list {
@@ -56,14 +62,12 @@ body {
   font-weight: 100;
   font-size: 1rem;
   color: white;
-
-  /* .main-nav-list li:not(:first-child) {
-  color: white; */
 }
 
 .hero {
   display: inline-block;
   align-items: center;
+  max-width: 130rem;
 }
 
 .heading-primary {
@@ -81,44 +85,20 @@ body {
   text-align: center;
   letter-spacing: 0.1rem;
   color: #fff;
-
-  /* white-space: initial; */
 }
-/* .break-word {
-  word-wrap: break-word;
-} */
 
 .description {
   font-family: Helvetica Neue;
   position: relative;
-  max-width: 59.5rem;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 300;
   color: #fff;
   letter-spacing: 0.2px;
   line-height: 2.6rem;
-  margin: 0 38rem;
-
+  margin: 0 40rem;
   opacity: 0.7;
 }
-
-/* .btn {
-  text-decoration: none;
-  color: #000;
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: center;
-  position: relative;
-  letter-spacing: 1.2px;
-  display: inline-block;
-  background-color: #4a4a4a;
-  padding: 1.5rem 3.5rem;
-  border-radius: 43px;
-  margin: 0 55rem;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-} */
 
 .btn,
 .btn:link,
@@ -128,10 +108,10 @@ body {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1.2px;
-  padding: 1.6rem 3.2rem;
+  padding: 1.4rem 3.2rem;
   border-radius: 43px;
   text-decoration: none;
-  margin: 0 55rem;
+  margin: 0 57rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -178,6 +158,19 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.chef-heading,
+.dish-heading,
+.how-heading {
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+/* SECTION FEATURE */
 .feature {
   /* max-width: 59.5rem; */
   /* height : 3rem;
@@ -227,8 +220,9 @@ body {
   color: #fff;
 }
 
+/* SECTION ABOUT */
 .section-about {
-  background-color: #4a4a4a;
+  background-color: #3a3a3a;
   display: grid;
   align-items: center;
   padding: 6.2rem;
@@ -249,11 +243,9 @@ body {
   letter-spacing: 1px;
   font-size: 1.2rem;
   /* font-weight: 300; */
-  max-width: 55rem;
+  max-width: 65rem;
   color: #d9d9d9;
   text-align: center;
-  /* align-self: center; */
-  left: 11.5rem;
   line-height: 2rem;
 }
 
@@ -262,13 +254,10 @@ body {
   /* grid-template-columns: repeat(3, 1fr); */
   gap: 1.6rem;
   padding: 1.6rem;
-  /* height: 3.2rem; */
-  height: 25rem;
+  height: 20rem;
   width: 35rem;
   margin-top: 5rem;
-  /* border-radius: 50%; */
   overflow: hidden;
-  /* display: block; */
   width: 100%;
   transition: all 0.4s;
 }
@@ -284,14 +273,6 @@ body {
   margin: -7rem 7.5rem;
 }
 
-.how-heading {
-  text-align: center;
-  color: #d9d9d9;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  font-weight: 300;
-  /* margin: 4.8rem 0; */
-}
 /* 
 .work {
   -template-columns: repeat(4, 1fr);
@@ -301,6 +282,7 @@ body {
   background-color: #4a4a4a;
 } */
 
+/* SECTION HOW IT WORKS */
 .work {
   box-shadow: 0 2.4rem 4.8rem rgba(124, 71, 71, 0.247);
   border-radius: 11px;
@@ -357,18 +339,13 @@ body {
   color: #fff;
 }
 
-.dish-heading {
-  text-align: center;
-  color: #d9d9d9;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  font-weight: 300;
-}
+/* SECTION DISH OF THE DAY */
 
 .dish-outline {
   /* margin: 0 5rem; */
   gap: 1.6rem;
   padding: 1.6rem 1.6rem;
+  padding-bottom: 3rem;
 
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
   border-radius: 11px;
@@ -401,7 +378,7 @@ body {
   font-weight: 300;
   font-size: 2.3rem;
   margin-top: 0.2rem;
-  margin-bottom: -0.7rem;
+  margin-bottom: 0.2rem;
 }
 
 .featured-subtitle {
@@ -413,16 +390,57 @@ body {
 .featured-text {
   font-weight: 100;
   line-height: 1.3rem;
+  padding-bottom: 2rem;
 }
 
-.star-img {
-  transform: scale(0.3);
+.icons {
+  display: flex;
 }
 
-.star-img1 {
+.star-icon {
+  font-size: 2rem;
+  color: #555;
+}
+
+.star-icon-1 {
   color: yellow;
+  font-size: 2rem;
 }
 
 .number {
-  display: grid;
+  margin: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.order {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: -0.5rem 1rem;
+  margin-left: 4rem;
+  border: solid 0.1px #fff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 43px;
+}
+
+.order:hover,
+.order:active {
+  background-color: #0ebe0e;
+}
+
+/* SECTION THIS MONTHS CHEF */
+.chef-img {
+  grid-template-columns: repeat(3fr 1fr);
+  gap: 7.6rem;
+  height: 6.8rem;
+  width: 6.8rem;
+  border-radius: 50%;
+  margin-right: 10.6rem;
+  margin-left: 5rem;
+  display: flex;
+  align-self: center;
+}
+.section-chef {
+  align-items: center;
 }
