@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: Helvetica Neue;
+  font-family: "Roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
   background-color: #2a2a2a;
@@ -71,7 +71,6 @@ nav {
 }
 
 .heading-primary {
-  font-family: Helvetica Neue;
   position: relative;
   max-width: 90rem;
   /* left: 11rem; */
@@ -88,7 +87,6 @@ nav {
 }
 
 .description {
-  font-family: Helvetica Neue;
   position: relative;
   text-align: center;
   font-size: 1.2rem;
@@ -119,7 +117,6 @@ nav {
   /* only for btn */
   border: none;
   cursor: pointer;
-  font-family: inherit;
 }
 
 .btn--full:link,
@@ -158,9 +155,9 @@ nav {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.chef-heading,
 .dish-heading,
-.how-heading {
+.how-heading,
+.recipes-heading {
   font-weight: 300;
   font-size: 3rem;
   text-align: center;
@@ -183,7 +180,6 @@ nav {
 }
 
 .feature-title {
-  font-family: Helvetica Neue;
   /* position: absolute; */
   position: relative;
   /* height : 3rem; */
@@ -196,7 +192,6 @@ nav {
 }
 
 .feature-text {
-  font-family: Helvetica Neue;
   /* position: absolute; */
   position: relative;
   /* height : 3rem; */
@@ -221,12 +216,28 @@ nav {
 }
 
 /* SECTION ABOUT */
+
 .section-about {
   background-color: #3a3a3a;
   display: grid;
   align-items: center;
   padding: 6.2rem;
   margin: 10rem 18rem;
+}
+
+.about {
+  position: relative;
+}
+.about h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  letter-spacing: 1rem;
+  font-weight: 900;
+  color: rgba(85, 85, 85, 0.918);
+  opacity: 0.3;
 }
 
 .about-title {
@@ -239,7 +250,6 @@ nav {
 }
 
 .about-text {
-  position: relative;
   letter-spacing: 1px;
   font-size: 1.2rem;
   /* font-weight: 300; */
@@ -296,6 +306,21 @@ nav {
   padding-bottom: 4rem;
 }
 
+.how {
+  position: relative;
+}
+.how h1 {
+  position: absolute;
+  top: 18%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  letter-spacing: 0.7rem;
+  font-weight: 900;
+  color: rgba(85, 85, 85, 0.918);
+  opacity: 0.3;
+}
+
 .work:hover {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
@@ -310,7 +335,6 @@ nav {
   font-size: 2rem;
   font-weight: 300;
   max-width: 35rem;
-  font-family: Helvetica Neue;
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
@@ -321,7 +345,6 @@ nav {
   letter-spacing: 0.5px;
   line-height: 1.2rem;
   color: #fff;
-  font-family: Helvetica Neue;
 }
 
 .work-title:hover {
@@ -340,6 +363,22 @@ nav {
 }
 
 /* SECTION DISH OF THE DAY */
+
+.dish {
+  position: relative;
+}
+
+.dish h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
 
 .dish-outline {
   /* margin: 0 5rem; */
@@ -430,17 +469,128 @@ nav {
 }
 
 /* SECTION THIS MONTHS CHEF */
-.chef-img {
-  grid-template-columns: repeat(3fr 1fr);
-  gap: 7.6rem;
-  height: 6.8rem;
-  width: 6.8rem;
-  border-radius: 50%;
-  margin-right: 10.6rem;
-  margin-left: 5rem;
-  display: flex;
-  align-self: center;
-}
 .section-chef {
-  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.chef-container {
+  display: flex;
+  flex-direction: column;
+}
+.chef {
+  display: flex;
+}
+.chef-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chef-name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1.2rem;
+}
+
+.chef-gallery img:not(last-child) {
+  margin-right: 2.7rem;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.chef-gallery img:first-child {
+  margin-right: 2.7rem;
+  height: 6.5rem;
+  width: 12rem;
+}
+
+.chef-heading-text {
+  margin-bottom: 5rem;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.chef-heading {
+  position: relative;
+}
+
+.chef-heading h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+
+.chef-note {
+  margin-bottom: 4.5rem;
+}
+
+.chef-img {
+  padding-bottom: 4rem;
+  margin-right: 1.5rem;
+}
+
+.chef-details {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+/* SECTION-RECIPES */
+.section-recipes {
+  margin: 8rem 0;
+}
+
+.recipes {
+  position: relative;
+}
+
+.Recipe-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipes h1 {
+  position: absolute;
+  top: 0.7%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  height: 4rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+.more-recipes {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-2,
+.recipe-3,
+.recipe-4 {
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+  /* padding: 2rem 4.5rem; */
+  gap: 2rem;
+  background-color: #4a4a4a;
+  /* max-width: 35rem;
+  padding-bottom: 4rem; */
+  margin: 1.2rem;
+  padding: 6.6rem;
+}
+.recipe-subs {
+  display: flex;
 }
