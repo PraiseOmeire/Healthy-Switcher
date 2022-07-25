@@ -68,9 +68,10 @@ header {
 
 .name {
   display: flex;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.6rem;
   text-decoration: none;
-  color: #0ebe0e;
+  color: #34c759;
   margin: 2.4rem;
   margin-left: 12rem;
 }
@@ -138,13 +139,13 @@ nav {
 .btn:visited {
   position: relative;
   display: inline-block;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  padding: 1.4rem 3.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 1.4rem 3rem;
   border-radius: 43px;
   text-decoration: none;
-  margin: 0 57rem;
+  margin: 0 55rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -192,7 +193,8 @@ nav {
 
 .dish-heading,
 .how-heading,
-.recipes-heading {
+.recipes-heading,
+.social-heading {
   font-weight: 300;
   font-size: 3rem;
   text-align: center;
@@ -211,14 +213,14 @@ nav {
   text-align: center;
   font-size: 1rem;
   /* padding-left: -2rem; */
-  margin: 0 10rem;
+  margin: 0 8rem;
 }
 
 .feature-title {
   /* position: absolute; */
-  position: relative;
+  /* position: relative; */
   /* height : 3rem; */
-  max-width: 35rem;
+  /* max-width: 35rem; */
   /* top: 40rem;
   left: calc(50% - 350px / 2 + 0.5px); */
   color: #fff;
@@ -230,7 +232,7 @@ nav {
   /* position: absolute; */
   position: relative;
   /* height : 3rem; */
-  max-width: 35rem;
+  /* max-width: 35rem; */
   /* top: 40rem;
   left: calc(50% - 350px / 2 + 0.5px); */
   color: #fff;
@@ -317,15 +319,6 @@ nav {
   padding: 6.2rem;
   margin: -7rem 7.5rem;
 }
-
-/* 
-.work {
-  -template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
-  padding: 1.6rem;
-  max-width: 35rem;
-  background-color: #4a4a4a;
-} */
 
 /* SECTION HOW IT WORKS */
 .work {
@@ -627,12 +620,44 @@ nav {
 .breakfast {
   background-color: #101010;
   border-radius: 7px;
-  padding: -9rem;
+  padding: 1.5rem;
   color: #ffffff;
   font-weight: 600;
   opacity: 0.3;
-  margin-top: 5rem;
+  margin: 5rem 24rem;
 }
+
+.dates {
+  margin: 3rem;
+  color: #fff;
+}
+
+.recipes-text {
+  margin-bottom: 5rem;
+  color: #fff;
+  font-size: 2.7rem;
+  padding: 0 3rem;
+}
+
+.chats1 {
+  display: flex;
+  align-items: center;
+  margin: 4rem 22rem;
+}
+.icon-text1 {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icon-eyes1 {
+  margin: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
 .more-recipes {
   display: flex;
   flex-direction: column;
@@ -650,7 +675,7 @@ nav {
   /* max-width: 35rem;
   padding-bottom: 4rem; */
   margin: 1.2rem;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   padding-left: 3rem;
   margin-right: 0.2rem;
 }
@@ -711,4 +736,177 @@ nav {
   background-size: cover;
   height: 25vh;
   background-repeat: no-repeat;
+}
+
+/* SECTION SOCIALS */
+
+.social-heading {
+  position: relative;
+}
+
+.social-heading-text {
+  margin-bottom: 5rem;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.social-heading h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+
+.socials {
+  /* box-shadow: 0 2.4rem 4rem rgba(124, 71, 71, 0.247); */
+  border-radius: 9px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding: 2rem 1rem;
+  gap: 8rem;
+  background-color: #252525;
+  margin: 1.2rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 10rem;
+}
+
+.socials-heading {
+  display: flex;
+  padding-bottom: 1.5rem;
+  border-bottom: solid #303030 2px;
+}
+.socials-icon {
+  border: 2px solid #303030;
+  border-radius: 100px;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 1.3rem 0 1.5rem;
+}
+
+.media {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 0.7rem;
+  margin-right: 3rem;
+  color: #fff;
+}
+
+.follow {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+  margin-left: 3rem;
+  border: solid 0.1px #303030;
+  text-decoration: none;
+  color: #737373;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1.7rem;
+  border-radius: 43px;
+}
+.socials-body {
+  color: #fff;
+  margin: 0 1.3rem 0 1.5rem;
+  font-weight: 500;
+}
+
+.socials-date {
+  margin: 1.7rem 0;
+  color: #737373;
+  font-size: 1.2rem;
+}
+.socials-text {
+  line-height: 2.3rem;
+  max-width: 35rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.socials-name {
+  color: #34c759;
+  margin-top: 2.5rem;
+}
+
+.insta-socials {
+  /* box-shadow: 0 2.4rem 4rem rgba(124, 71, 71, 0.247); */
+  border-radius: 9px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding-top: 2rem;
+  /* gap: 8rem; */
+  background-color: #252525;
+  margin-top: 1.2rem;
+  margin-bottom: 10rem;
+}
+
+.instagram-body {
+  display: flex;
+  /* margin-bottom: 0;
+  padding-bottom: 0; */
+}
+
+.instagram-body img {
+  height: 10rem;
+  width: 12rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #252525;
+  /* height: 100vh; */
+  /* padding-top: 5rem 0; */
+  /* padding-bottom: 0; */
+  margin-bottom: 5rem;
+}
+
+.footer-feature {
+  text-align: center;
+  font-size: 1rem;
+  margin: 5rem 8rem;
+  margin-bottom: 4rem;
+}
+.feature-text {
+  margin-top: 0.9rem;
+}
+.footer-footer {
+  display: flex;
+  border-top: 0.1rem solid #737373;
+  margin-bottom: 5rem;
+}
+
+.footer-footer img {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 51rem;
+  margin-top: 3.7rem;
+}
+.name2 {
+  /* display: flex; */
+  font-size: 1.3rem;
+  letter-spacing: 0.6rem;
+  text-decoration: none;
+  color: #34c759;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+
+.footer-p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  margin-left: 49rem;
+  padding-bottom: 3rem;
+  margin-top: -4.1rem;
+  color: #737373;
 }
