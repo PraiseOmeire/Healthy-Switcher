@@ -1,4 +1,39 @@
 /* GENERAL */
+/* -----01 TYPOGRAPHY SYSTEM
+
+SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    
+    --FONT SIZE SYSTEM (px)
+    10 / 12  / 14 / 16 / 18 / 20 / 24 / 36 / 38 / 44 / 52 / 62 / 74 / 86 / 96
+
+    --FONT WEIGHT::
+--Defaualt: 400
+Medium: 500
+semi-bold: 600
+700
+bold: 900
+--LINE HEIGHT:
+--Default: 1
+small; 1.05
+medium:1.2
+large:1.8
+paragraph-default 1.6
+
+-------02 COLORS
+-Primary: #101010
+-tints: 
+-Shades:#252525
+-Accents
+-Grays: #555  #333  #6f6f6f(lightest gray allowed)
+
+---- 05 SHADOWS
+ box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+-----06 BORDER-RADIUS
+default: 9px
+
+-----07 WHITESPACE
+ */
 
 * {
   padding: 0;
@@ -11,10 +46,10 @@ html {
 }
 
 body {
-  font-family: Helvetica Neue;
+  font-family: "Roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
-  background-color: #2a2a2a;
+  background-color: #101010;
 }
 
 main {
@@ -33,9 +68,10 @@ header {
 
 .name {
   display: flex;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.6rem;
   text-decoration: none;
-  color: #0ebe0e;
+  color: #34c759;
   margin: 2.4rem;
   margin-left: 12rem;
 }
@@ -71,7 +107,6 @@ nav {
 }
 
 .heading-primary {
-  font-family: Helvetica Neue;
   position: relative;
   max-width: 90rem;
   /* left: 11rem; */
@@ -88,7 +123,6 @@ nav {
 }
 
 .description {
-  font-family: Helvetica Neue;
   position: relative;
   text-align: center;
   font-size: 1.2rem;
@@ -105,13 +139,13 @@ nav {
 .btn:visited {
   position: relative;
   display: inline-block;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  padding: 1.4rem 3.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 1.4rem 3rem;
   border-radius: 43px;
   text-decoration: none;
-  margin: 0 57rem;
+  margin: 0 55rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -119,7 +153,6 @@ nav {
   /* only for btn */
   border: none;
   cursor: pointer;
-  font-family: inherit;
 }
 
 .btn--full:link,
@@ -158,9 +191,10 @@ nav {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.chef-heading,
 .dish-heading,
-.how-heading {
+.how-heading,
+.recipes-heading,
+.social-heading {
   font-weight: 300;
   font-size: 3rem;
   text-align: center;
@@ -179,15 +213,14 @@ nav {
   text-align: center;
   font-size: 1rem;
   /* padding-left: -2rem; */
-  margin: 0 10rem;
+  margin: 0 8rem;
 }
 
 .feature-title {
-  font-family: Helvetica Neue;
   /* position: absolute; */
-  position: relative;
+  /* position: relative; */
   /* height : 3rem; */
-  max-width: 35rem;
+  /* max-width: 35rem; */
   /* top: 40rem;
   left: calc(50% - 350px / 2 + 0.5px); */
   color: #fff;
@@ -196,11 +229,10 @@ nav {
 }
 
 .feature-text {
-  font-family: Helvetica Neue;
   /* position: absolute; */
   position: relative;
   /* height : 3rem; */
-  max-width: 35rem;
+  /* max-width: 35rem; */
   /* top: 40rem;
   left: calc(50% - 350px / 2 + 0.5px); */
   color: #fff;
@@ -221,12 +253,28 @@ nav {
 }
 
 /* SECTION ABOUT */
+
 .section-about {
-  background-color: #3a3a3a;
+  background-color: #252525;
   display: grid;
   align-items: center;
   padding: 6.2rem;
   margin: 10rem 18rem;
+}
+
+.about {
+  position: relative;
+}
+.about h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  letter-spacing: 1rem;
+  font-weight: 900;
+  color: rgba(85, 85, 85, 0.918);
+  opacity: 0.3;
 }
 
 .about-title {
@@ -239,7 +287,6 @@ nav {
 }
 
 .about-text {
-  position: relative;
   letter-spacing: 1px;
   font-size: 1.2rem;
   /* font-weight: 300; */
@@ -273,15 +320,6 @@ nav {
   margin: -7rem 7.5rem;
 }
 
-/* 
-.work {
-  -template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
-  padding: 1.6rem;
-  max-width: 35rem;
-  background-color: #4a4a4a;
-} */
-
 /* SECTION HOW IT WORKS */
 .work {
   box-shadow: 0 2.4rem 4.8rem rgba(124, 71, 71, 0.247);
@@ -290,10 +328,25 @@ nav {
   transition: all 0.4s;
   padding: 5rem 1.5rem;
   gap: 8rem;
-  background-color: #4a4a4a;
+  background-color: #252525;
   max-width: 35rem;
   margin: 1.2rem;
   padding-bottom: 4rem;
+}
+
+.how {
+  position: relative;
+}
+.how h1 {
+  position: absolute;
+  top: 18%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  letter-spacing: 0.7rem;
+  font-weight: 900;
+  color: rgba(85, 85, 85, 0.918);
+  opacity: 0.3;
 }
 
 .work:hover {
@@ -310,7 +363,6 @@ nav {
   font-size: 2rem;
   font-weight: 300;
   max-width: 35rem;
-  font-family: Helvetica Neue;
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
@@ -321,7 +373,6 @@ nav {
   letter-spacing: 0.5px;
   line-height: 1.2rem;
   color: #fff;
-  font-family: Helvetica Neue;
 }
 
 .work-title:hover {
@@ -340,6 +391,22 @@ nav {
 }
 
 /* SECTION DISH OF THE DAY */
+
+.dish {
+  position: relative;
+}
+
+.dish h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
 
 .dish-outline {
   /* margin: 0 5rem; */
@@ -430,17 +497,416 @@ nav {
 }
 
 /* SECTION THIS MONTHS CHEF */
-.chef-img {
-  grid-template-columns: repeat(3fr 1fr);
-  gap: 7.6rem;
-  height: 6.8rem;
-  width: 6.8rem;
-  border-radius: 50%;
-  margin-right: 10.6rem;
-  margin-left: 5rem;
-  display: flex;
-  align-self: center;
-}
 .section-chef {
+  display: flex;
+  justify-content: space-between;
+}
+.chef-container {
+  display: flex;
+  flex-direction: column;
+}
+.chef {
+  display: flex;
+}
+.chef-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chef-name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1.2rem;
+}
+
+.chef-gallery img:not(last-child) {
+  margin-right: 2.7rem;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.chef-gallery img:first-child {
+  margin-right: 2.7rem;
+  height: 6.5rem;
+  width: 12rem;
+}
+
+.chef-heading-text {
+  margin-bottom: 5rem;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.chef-heading {
+  position: relative;
+}
+
+.chef-heading h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+
+.chef-note {
+  margin-bottom: 4.5rem;
+}
+
+.chef-img {
+  padding-bottom: 4rem;
+  margin-right: 1.5rem;
+}
+
+.chef-details {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+/* SECTION-RECIPES */
+.section-recipes {
+  margin: 8rem 0;
+}
+
+.recipes {
+  position: relative;
+}
+
+.Recipe-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipes h1 {
+  position: absolute;
+  top: 0.7%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  height: 4rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+
+.Recipe-1 {
+  background-image: url("../images/Recipes-1.png");
+  background-size: cover;
+  height: 80vh;
+  width: 65vw;
+  background-repeat: no-repeat;
+  border-radius: 11px;
+  /* text-align: center; */
+}
+
+.recipe-1-texts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.breakfast {
+  background-color: #101010;
+  border-radius: 7px;
+  padding: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  opacity: 0.3;
+  margin: 5rem 24rem;
+}
+
+.dates {
+  margin: 3rem;
+  color: #fff;
+}
+
+.recipes-text {
+  margin-bottom: 5rem;
+  color: #fff;
+  font-size: 2.7rem;
+  padding: 0 3rem;
+}
+
+.chats1 {
+  display: flex;
   align-items: center;
+  margin: 4rem 22rem;
+}
+.icon-text1 {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icon-eyes1 {
+  margin: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.more-recipes {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-2,
+.recipe-3,
+.recipe-4 {
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+  /* padding: 2rem 4.5rem; */
+  gap: 2rem;
+  background-color: #252525;
+  /* max-width: 35rem;
+  padding-bottom: 4rem; */
+  margin: 1.2rem;
+  padding: 2.5rem 0;
+  padding-left: 3rem;
+  margin-right: 0.2rem;
+}
+.recipe-subs {
+  display: flex;
+}
+
+.recipe-text {
+  color: #fff;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 1.7rem;
+  font-weight: 600;
+}
+.lunch {
+  background-color: #101010;
+  border-radius: 7px;
+  padding: 1rem 1rem;
+  color: #ffffff;
+  font-weight: 600;
+  opacity: 0.3;
+}
+.date {
+  margin: 0.8rem 1rem;
+  margin-left: 2.7rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icon-eye {
+  margin: 0.8rem 1rem;
+  margin-left: 10rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icon-chat {
+  margin: 0.8rem 1rem;
+  margin-left: 9rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.icon-text {
+  margin: 0.8rem 1rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.recipe-3 {
+  background-image: url("../images/recipes-3.png");
+  background-size: cover;
+  height: 25vh;
+  background-repeat: no-repeat;
+}
+
+/* SECTION SOCIALS */
+
+.social-heading {
+  position: relative;
+}
+
+.social-heading-text {
+  margin-bottom: 5rem;
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  color: #d9d9d9;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.social-heading h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+  color: rgba(85, 85, 85, 0.918);
+}
+
+.socials {
+  /* box-shadow: 0 2.4rem 4rem rgba(124, 71, 71, 0.247); */
+  border-radius: 9px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding: 2rem 1rem;
+  gap: 8rem;
+  background-color: #252525;
+  margin: 1.2rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 10rem;
+}
+
+.socials-heading {
+  display: flex;
+  padding-bottom: 1.5rem;
+  border-bottom: solid #303030 2px;
+}
+.socials-icon {
+  border: 2px solid #303030;
+  border-radius: 100px;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 1.3rem 0 1.5rem;
+}
+
+.media {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 0.7rem;
+  margin-right: 3rem;
+  color: #fff;
+}
+
+.follow {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+  margin-left: 3rem;
+  border: solid 0.1px #303030;
+  text-decoration: none;
+  color: #737373;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1.7rem;
+  border-radius: 43px;
+}
+.socials-body {
+  color: #fff;
+  margin: 0 1.3rem 0 1.5rem;
+  font-weight: 500;
+}
+
+.socials-date {
+  margin: 1.7rem 0;
+  color: #737373;
+  font-size: 1.2rem;
+}
+.socials-text {
+  line-height: 2.3rem;
+  max-width: 35rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.socials-name {
+  color: #34c759;
+  margin-top: 2.5rem;
+}
+
+.insta-socials {
+  /* box-shadow: 0 2.4rem 4rem rgba(124, 71, 71, 0.247); */
+  border-radius: 9px;
+  overflow: hidden;
+  transition: all 0.4s;
+  padding-top: 2rem;
+  /* gap: 8rem; */
+  background-color: #252525;
+  margin-top: 1.2rem;
+  margin-bottom: 10rem;
+}
+
+.instagram-body {
+  display: flex;
+  /* margin-bottom: 0;
+  padding-bottom: 0; */
+}
+
+.instagram-body img {
+  height: 10rem;
+  width: 12rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #252525;
+  /* height: 100vh; */
+  /* padding-top: 5rem 0; */
+  /* padding-bottom: 0; */
+  margin-bottom: 5rem;
+}
+
+.footer-feature {
+  text-align: center;
+  font-size: 1rem;
+  margin: 5rem 8rem;
+  margin-bottom: 4rem;
+}
+.feature-text {
+  margin-top: 0.9rem;
+}
+.footer-footer {
+  display: flex;
+  border-top: 0.1rem solid #737373;
+  margin-bottom: 5rem;
+}
+
+.footer-footer img {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 51rem;
+  margin-top: 3.7rem;
+}
+.name2 {
+  /* display: flex; */
+  font-size: 1.3rem;
+  letter-spacing: 0.6rem;
+  text-decoration: none;
+  color: #34c759;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+
+.footer-p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  margin-left: 49rem;
+  padding-bottom: 3rem;
+  margin-top: -4.1rem;
+  color: #737373;
 }
